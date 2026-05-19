@@ -1,7 +1,7 @@
 <?= loadPartial("head"); ?>
 <?= loadPartial("navbar"); ?>
 
-<?php $listing = (object) $listing; ?>
+<?php $listing = is_object($listing) ? $listing : (object) ($listing ?? []); ?>
 
 <section class="container mx-auto p-4 mt-6">
     <div class="bg-white rounded-lg shadow p-6">
