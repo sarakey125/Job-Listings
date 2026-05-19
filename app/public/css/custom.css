@@ -1,18 +1,12 @@
 /* ============================================================
    JOBSEEKER — CUSTOM STYLESHEET
-   Pangalan ng Student: ______________________________
-   Theme Name:          ______________________________
+   Pangalan ng Student: ------
+   Theme Name:          Slate & Emerald — Professional, Business, Modern
    ============================================================ */
 
-/* --- Google Fonts Import (optional) ---
-   Pumunta sa https://fonts.google.com, pumili ng font,
-   i-copy ang @import link, i-paste dito.
-
-   Halimbawa:
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-*/
-
-
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap');
 
 
 /* ----------------------------------------------------------------
@@ -22,78 +16,54 @@
    Tip: https://coolors.co — para pumili ng color palette
         https://htmlcolorcodes.com — para makita ang hex codes
    ---------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Tilt+Neon&display=swap');
 
 :root {
-  --color-header:       #104F55;   /* Header at navigation bar */
-  --color-accent:       #01200F;   /* "Post a Job" button at mga highlight */
-  --color-page-bg:      #F4F3F2;   /* Background ng buong page */
-  --color-card-bg:      #F3F3F3;   /* Background ng mga card/box */
-  --color-heading:      #1E1E1E;   /* Kulay ng mga title at heading */
-  --color-body-text:    #212121;   /* Regular na body text */
-  --color-link:         #9EC5AB;   /* Mga clickable na links */
-  --color-tag-bg:       #E5E5E5;   /* Background ng mga tag/badge */
-  --color-tag-text:     #2E2E2E;   /* Text ng mga tag/badge */
-  --color-footer:       #32746D;   /* Footer background */
-  --showcase-overlay:   rgba(1, 21, 2, 0.3); /* Hero banner overlay
-                                               0.0 = transparent
-                                               0.9 = halos itim */
+  --color-header:       #1C2B2B;   /* Header at navigation bar */
+  --color-accent:       #0D7A5F;   /* "Post a Job" button at mga highlight */
+  --color-page-bg:      #F3F5F4;   /* Background ng buong page */
+  --color-card-bg:      #FFFFFF;   /* Background ng mga card/box */
+  --color-heading:      #1C2B2B;   /* Kulay ng mga title at heading */
+  --color-body-text:    #2D3D3D;   /* Regular na body text */
+  --color-link:         #10A67E;   /* Mga clickable na links */
+  --color-tag-bg:       #E0F4EE;   /* Background ng mga tag/badge */
+  --color-tag-text:     #0D7A5F;   /* Text ng mga tag/badge */
+  --color-footer:       #1C2B2B;  
+  --showcase-overlay:   rgba(28, 43, 43, 0.30);
 }
 
 
-/* ----------------------------------------------------------------
-   SECTION 2: MGA FONT (Typography)
-   ----------------------------------------------------------------
-   Palitan ng font name na gusto mo.
-   Kung gagamit ng Google Font, i-import muna sa taas ng file.
-
-   Halimbawa ng built-in fonts (hindi na kailangan ng import):
-     'Georgia', serif
-     'Arial', sans-serif
-     'Verdana', sans-serif
-     'Times New Roman', serif
-     'Courier New', monospace
-   ---------------------------------------------------------------- */
+/*Typography*/
 
 :root {
-  --font-heading: 'Tilt Neon', 'Georgia', serif;      /* Para sa mga title at heading */
-  --font-body:    'Roboto', 'Arial', sans-serif;   /* Para sa regular na text */
+  --font-heading: 'DM Serif Display', 'Georgia', serif; 
+  --font-body:    'DM Sans', 'Arial', sans-serif;
 }
 
 
-/* ----------------------------------------------------------------
-   SECTION 3: HUGIS AT ESTILO (Shape & Style)
-   ----------------------------------------------------------------
-   --border-radius:
-     0px      = matuwid / sharp corners
-     4px      = konting rounding
-     8px      = medyo rounded
-     16px     = malakas na rounding
-     9999px   = pill shape / fully round
-
-   --card-shadow:
-     none                           = walang shadow
-     0 2px 8px rgba(0,0,0,0.08)    = mahinang shadow
-     0 4px 16px rgba(0,0,0,0.20)   = malakas na shadow
-   ---------------------------------------------------------------- */
+/*Shape & Style*/
 
 :root {
-  --border-radius: 4px;
-  --card-shadow:   0 3px 4px rgba(0, 0, 0, 0.08);
+  --border-radius: 10px;
+  --card-shadow:   0 1px 3px rgba(28, 43, 43, 0.06),
+                   0 4px 14px rgba(28, 43, 43, 0.07);
 }
 
-
-
-
-/* ================================================================
-   === HUWAG I-EDIT ANG SECTION NA ITO (unless gusto mong advanced!) ===
-   === Ito ang code na gumagamit ng iyong mga variables sa itaas.  ===
-   ================================================================ */
+html,
+body {
+  min-height: 100%;
+}
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: var(--font-body) !important;
   background-color: var(--color-page-bg) !important;
   color: var(--color-body-text) !important;
+}
+
+.site-footer {
+  margin-top: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -137,10 +107,20 @@ header {
   background-color: var(--color-card-bg) !important;
   border-radius: var(--border-radius) !important;
   box-shadow: var(--card-shadow) !important;
+  border: 0.5px solid rgba(13, 122, 95, 0.10) !important;
 }
+
 
 .bg-indigo-100 {
   background-color: var(--color-tag-bg) !important;
+  display: inline-block !important;
+  padding: 3px 10px !important;
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+  border: 1px solid rgba(13, 122, 95, 0.18) !important;
+  line-height: 1.5 !important;
 }
 
 .text-indigo-700,
@@ -173,25 +153,78 @@ footer,
   background-color: var(--color-page-bg) !important;
 }
 
+.auth-card {
+  max-width: 420px;
+  width: 100%;
+  padding: 28px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 28px rgba(28, 43, 43, 0.10),
+              0 2px 6px  rgba(28, 43, 43, 0.06) !important;
+  border: 0.5px solid rgba(13, 122, 95, 0.13) !important;
+  background-color: #ffffff !important;
+  font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif !important;
+  color: #1C2B2B !important;
+}
 
-/* ----------------------------------------------------------------
-   ADVANCED ZONE — Para sa gustong mag-explore pa!
-   ----------------------------------------------------------------
-   Alisin ang at para i-activate ang isang rule.
-   ---------------------------------------------------------------- */
+.auth-card h2 {
+  font-family: 'DM Serif Display', 'Georgia', serif !important;
+  font-weight: 400 !important;
+  font-size: 1.625rem !important; /* ~26px */
+  color: #1C2B2B !important;
+  margin-bottom: 0.5rem !important;
+}
 
-/* Hover effect sa mga link */
-/* a:hover {
-  text-decoration: underline;
-  opacity: 0.85;
-} */
+.auth-card .message {
+  background: #E0F4EE !important;
+  color: #1C2B2B !important;
+  border-left: 4px solid #0D7A5F !important;
+  border-radius: 0 !important;
+}
 
-/* Kulay ng input fields */
-/* input, select, textarea {
-  border-color: var(--color-link) !important;
-  border-radius: var(--border-radius) !important;
-} */
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+  width: 100% !important;
+  padding: 10px 14px !important;
+  border: 1px solid rgba(13, 122, 95, 0.20) !important;
+  border-radius: 8px !important;
+  background: #F8FAFA !important;
+  color: #2D3D3D !important;
+  font-size: 0.95rem !important;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
 
-/* Kulay ng success badge */
-/* .bg-green-100 { background-color: #d1fae5 !important; }
-   .text-green-800 { color: #065f46 !important; } */
+.auth-card input[type="text"]:focus,
+.auth-card input[type="email"]:focus,
+.auth-card input[type="password"]:focus {
+  border-color: #0D7A5F !important;
+  box-shadow: 0 0 0 3px rgba(13, 122, 95, 0.12) !important;
+  outline: none !important;
+}
+
+.auth-card button,
+.auth-card .btn-primary,
+.auth-card .bg-blue-500 {
+  background-color: #0D7A5F !important;
+  border: none !important;
+  color: #ffffff !important;
+  padding: 10px 14px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+.auth-card button:hover,
+.auth-card .btn-primary:hover {
+  filter: brightness(1.08) !important;
+  transform: scale(1.01) !important;
+}
+
+.auth-card a {
+  color: #0D7A5F !important;
+}
+
+@media (max-width: 640px) {
+  .auth-card { padding: 20px !important; margin: 0 12px !important; }
+  .auth-card h2 { font-size: 1.5rem !important; }
+}
